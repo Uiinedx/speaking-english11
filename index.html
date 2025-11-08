@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future City: Interactive Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for Visual Stickers -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for the futuristic feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Deep dark blue-gray */
+        }
+        .section-header {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .card-pro {
+            background-color: #161b22;
+            border-left: 5px solid #10b981; /* Emerald border */
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.15); /* Soft glow */
+        }
+        .card-con {
+            background-color: #161b22;
+            border-left: 5px solid #ef4444; /* Red border */
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.15); /* Soft glow */
+        }
+        .speaker-tag {
+            background-color: #21262d;
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- HEADER / INTRODUCTORY SEGMENT -->
+        <header class="text-center mb-12 border-b-2 border-cyan-700/50 pb-6">
+            <h1 class="text-6xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 mb-2">
+                THE FUTURE CITY PROJECT
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-400 font-light">A Critical Look at Trade-offs & Innovation (Interactive Portfolio)</p>
+            <div class="mt-4 text-sm speaker-tag inline-block px-3 py-1 rounded-full text-cyan-300">
+                <i data-lucide="mic" class="inline w-4 h-4 mr-1"></i> SPEAKER 1 (MC)
+            </div>
+            <p class="mt-4 text-lg max-w-4xl mx-auto italic leading-relaxed text-gray-300">
+                "Today, our team invites you to look past the smog and traffic of today and envision The Future City. It’s a place of sky-high innovation, where every streetlight, every vehicle, and every water pipe is ‘smart.’ Our presentation isn't just a fantasy; it's a critical look at the trade-offs. Click on any section header below to dive into the pros and cons."
+            </p>
+        </header>
+
+        <main class="space-y-12">
+
+            <!-- 1. INFRASTRUCTURE & TECHNOLOGY -->
+            <section id="infrastructure" class="pt-6 border border-gray-800 rounded-xl p-4 transition duration-300 hover:border-fuchsia-400/50">
+                <div class="section-header flex items-center justify-between p-3 rounded-lg bg-gray-900/50" onclick="toggleSection('content-infrastructure', 'icon-infrastructure')">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-500">
+                        <i data-lucide="cpu" class="inline w-7 h-7 mr-2"></i> 1. INFRASTRUCTURE & TECHNOLOGY (THE SMART CORE)
+                    </h2>
+                    <i id="icon-infrastructure" data-lucide="chevron-down" class="w-6 h-6 text-fuchsia-300 transition-transform duration-300"></i>
+                </div>
+
+                <div id="content-infrastructure" class="hidden space-y-8 mt-6">
+                    <img src="https://github.com/Uiinedx/public-assets/blob/main/t%C3%A0o%20nha.jpg?raw=true" alt="Smart City Infrastructure" class="w-full rounded-lg shadow-xl shadow-cyan-900/50">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- PRO: SELF-HEALING SYSTEM -->
+                        <div class="p-6 rounded-xl card-pro">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="zap" class="w-8 h-8 text-emerald-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-emerald-300">ADVANTAGE: THE SELF-HEALING SYSTEM</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 2</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The massive advantage is a system that predicts and prevents problems before they occur. Imagine the city infrastructure as a **super-advanced nervous system**. Sensors detect a minor leak in a pipe minutes before it bursts and reroute the water flow instantly. This isn't just about efficiency; it's about **zero downtime**. Everything is handled quietly in the background, making life for citizens remarkably smooth, consistent, and predictable. This level of autonomous maintenance is the foundation of future life."
+                            </p>
+                        </div>
+                        <!-- CON: SINGLE POINT OF FAILURE -->
+                        <div class="p-6 rounded-xl card-con">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="bug" class="w-8 h-8 text-red-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-red-300">DISADVANTAGE: SINGLE POINT OF FAILURE & DIGITAL DIVIDE</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 3</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The smoother the system, the harder the fall. The disadvantage is the **high vulnerability to catastrophic system failure**. By centralizing control through one AI, we create a ‘single point of failure.’ A sophisticated cyber-attack could **paralyze essential services**—the power grid, water treatment, and emergency response system—all at once. Furthermore, the astronomical cost of constant hardware upgrades inevitably **deepens the ‘digital divide,’** leaving low-income citizens perpetually behind."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. TRANSPORTATION -->
+            <section id="transportation" class="pt-6 border border-gray-800 rounded-xl p-4 transition duration-300 hover:border-fuchsia-400/50">
+                <div class="section-header flex items-center justify-between p-3 rounded-lg bg-gray-900/50" onclick="toggleSection('content-transportation', 'icon-transportation')">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-500">
+                        <i data-lucide="bus" class="inline w-7 h-7 mr-2"></i> 2. TRANSPORTATION (MOVEMENT & MOBILITY)
+                    </h2>
+                    <i id="icon-transportation" data-lucide="chevron-down" class="w-6 h-6 text-fuchsia-300 transition-transform duration-300"></i>
+                </div>
+
+                <div id="content-transportation" class="hidden space-y-8 mt-6">
+                    <img src="https://github.com/Uiinedx/public-assets/blob/main/xe%20di%20truyen.jpg?raw=true" alt="Self-Driving Mobility Network" class="w-full rounded-lg shadow-xl shadow-indigo-900/50">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- PRO: SEAMLESS, ACCIDENT-FREE MOVEMENT -->
+                        <div class="p-6 rounded-xl card-pro">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="car" class="w-8 h-8 text-emerald-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-emerald-300">ADVANTAGE: SEAMLESS, ACCIDENT-FREE MOVEMENT</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 4</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The dream of the future commute is absolute automation and personalized speed. We’ll use a network of shared, electric, self-driving pods and delivery drones. These vehicles coordinate perfectly, allowing for **maximum density without congestion**. Since AI controls the speed, human error—the cause of 94% of today's accidents—is **eliminated**. You just tap your destination, and the most energy-efficient, fastest route is executed flawlessly."
+                            </p>
+                        </div>
+                        <!-- CON: PRIVACY EROSION AND ECONOMIC SHOCK -->
+                        <div class="p-6 rounded-xl card-con">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="eye" class="w-8 h-8 text-red-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-red-300">DISADVANTAGE: PRIVACY EROSION AND ECONOMIC SHOCK</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 5</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The cost of that seamless journey is **total surveillance** and massive job displacement. For the AI to achieve zero-accident coordination, it must track every movement, every passenger, and every package, **eroding personal privacy**. More critically, the shift to driverless pods will instantly wipe out **millions of jobs globally**: taxi drivers, long-haul truckers, and bus operators. This causes immense socio-economic disruption that governments are unprepared for."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. LIVING CONDITIONS -->
+            <section id="living" class="pt-6 border border-gray-800 rounded-xl p-4 transition duration-300 hover:border-fuchsia-400/50">
+                <div class="section-header flex items-center justify-between p-3 rounded-lg bg-gray-900/50" onclick="toggleSection('content-living', 'icon-living')">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-500">
+                        <i data-lucide="home" class="inline w-7 h-7 mr-2"></i> 3. LIVING CONDITIONS (HEALTH & HOME)
+                    </h2>
+                    <i id="icon-living" data-lucide="chevron-down" class="w-6 h-6 text-fuchsia-300 transition-transform duration-300"></i>
+                </div>
+
+                <div id="content-living" class="hidden space-y-8 mt-6">
+                    <img src="https://github.com/Uiinedx/public-assets/blob/main/living.jpg?raw=true" alt="Integrated Urban Farming" class="w-full rounded-lg shadow-xl shadow-green-900/50">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- PRO: HEALTH AND SUSTAINABILITY AT HOME -->
+                        <div class="p-6 rounded-xl card-pro">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="heart-pulse" class="w-8 h-8 text-emerald-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-emerald-300">ADVANTAGE: HEALTH AND SUSTAINABILITY AT HOME</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 6</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "Future living spaces are designed to make you healthier and more self-sufficient. Our homes are integrated into 'vertical farms,' ensuring our food supply is **local, fresh, and chemically managed**. Wearable tech constantly streams our biometric data to a predictive AI. This system acts as a perpetual **'early warning' doctor**, recommending specific changes to diet or sleep, or scheduling a check-up before you even feel sick. Wellness becomes the standard."
+                            </p>
+                        </div>
+                        <!-- CON: ISOLATION AND THE MONOTONOUS CITY -->
+                        <div class="p-6 rounded-xl card-con">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="frown" class="w-8 h-8 text-red-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-red-300">DISADVANTAGE: ISOLATION AND THE MONOTONOUS CITY</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 7</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The pursuit of maximum convenience leads to a dark side: **social fragmentation** and the sterile environment. When all needs can be managed from within a smart building, the need to interact with the outside world drastically diminishes. This promotes a sense of **isolation** and digital echo chambers. Furthermore, the drive for technological optimization makes all future cities look the same—sleek, cold, and uniform—sacrificing the **unique cultural soul** and historical character that gives a city its identity."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. ENVIRONMENT & ENERGY -->
+            <section id="environment" class="pt-6 border border-gray-800 rounded-xl p-4 transition duration-300 hover:border-fuchsia-400/50">
+                <div class="section-header flex items-center justify-between p-3 rounded-lg bg-gray-900/50" onclick="toggleSection('content-environment', 'icon-environment')">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-500">
+                        <i data-lucide="leaf" class="inline w-7 h-7 mr-2"></i> 4. ENVIRONMENT & ENERGY (SUSTAINABILITY & TRADE-OFFS)
+                    </h2>
+                    <i id="icon-environment" data-lucide="chevron-down" class="w-6 h-6 text-fuchsia-300 transition-transform duration-300"></i>
+                </div>
+
+                <div id="content-environment" class="hidden space-y-8 mt-6">
+                    <img src="https://github.com/Uiinedx/public-assets/blob/main/nag%20luon%20moi%20tr%C6%B0.jpg?raw=true" alt="Sustainable Energy Systems" class="w-full rounded-lg shadow-xl shadow-yellow-900/50">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- PRO: TRUE CIRCULAR ECONOMY -->
+                        <div class="p-6 rounded-xl card-pro">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="recycle" class="w-8 h-8 text-emerald-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-emerald-300">ADVANTAGE: TRUE CIRCULAR ECONOMY</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 8</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The future city’s success rests on achieving a true, closed-loop circular economy and zero emissions. Every building surface, from walls to roads, acts as an **energy collector**—be it solar, integrated wind turbines, or capturing kinetic energy. Energy is stored locally, making the city resilient. Wastewater is **100% treated and recycled**. The goal is to make the city a net-zero contributor to carbon emissions and waste, proving that high-tech living can coexist with a flourishing planet."
+                            </p>
+                        </div>
+                        <!-- CON: MINING AND E-WASTE CRISIS -->
+                        <div class="p-6 rounded-xl card-con">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="land-plot" class="w-8 h-8 text-red-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-red-300">DISADVANTAGE: MINING AND E-WASTE CRISIS</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 9</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "That perfect green vision hides a significant cost. The disadvantage is the massive external environmental footprint and the growing e-waste mountain. Achieving 100% green energy requires immense quantities of specialized batteries and sensors, built using **rare earth minerals** like lithium and cobalt. The mining of these materials is environmentally destructive and often ethically questionable. The short lifecycle of smart devices creates an unprecedented **e-waste crisis**—piles of toxic, obsolete electronics."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CULTURAL MINDSET -->
+            <section id="culture" class="pt-6 border border-gray-800 rounded-xl p-4 transition duration-300 hover:border-fuchsia-400/50">
+                <div class="section-header flex items-center justify-between p-3 rounded-lg bg-gray-900/50" onclick="toggleSection('content-culture', 'icon-culture')">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-500">
+                        <i data-lucide="users-2" class="inline w-7 h-7 mr-2"></i> 5. CULTURAL MINDSET (HUMANITY'S EVOLUTION)
+                    </h2>
+                    <i id="icon-culture" data-lucide="chevron-down" class="w-6 h-6 text-fuchsia-300 transition-transform duration-300"></i>
+                </div>
+
+                <div id="content-culture" class="hidden space-y-8 mt-6">
+                    <img src="https://github.com/Uiinedx/public-assets/blob/main/cultural.jpg?raw=true" alt="Humanity and AI interaction" class="w-full rounded-lg shadow-xl shadow-pink-900/50">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- PRO: EMPOWERMENT OF HUMAN CREATIVITY -->
+                        <div class="p-6 rounded-xl card-pro">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="lightbulb" class="w-8 h-8 text-emerald-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-emerald-300">ADVANTAGE: HYPER-LEARNING AND CREATIVITY</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 10</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The great opportunity here is the **empowerment of human creativity** and hyper-learning. With AI handling repetitive tasks and providing instant knowledge access, humans are freed up to focus entirely on **abstract thinking, art, and complex problem-solving**. AI becomes the ultimate personalized tutor, adapting education to every individual's pace, leading to unprecedented levels of skill development and specialization."
+                            </p>
+                        </div>
+                        <!-- CON: INTELLECTUAL ATROPHY -->
+                        <div class="p-6 rounded-xl card-con">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="brain-off" class="w-8 h-8 text-red-400 mr-3"></i>
+                                <h3 class="text-xl font-semibold text-red-300">DISADVANTAGE: INTELLECTUAL ATROPHY</h3>
+                            </div>
+                            <div class="text-sm speaker-tag inline-block px-2 py-0.5 rounded-full text-gray-400 mb-3">SPEAKER 10</div>
+                            <p class="text-gray-300 leading-relaxed">
+                                "The final, terrifying disadvantage is Intellectual Atrophy. When the city’s brain (the AI) takes care of all complex calculations, efficiency optimizations, and truth-finding, our own ability to **think critically, challenge assumptions, and navigate ambiguous situations** begins to wither. If we stop using our minds to solve difficult problems, our creativity and resilience will fade, leaving us **intellectually dependent** on the machines we created."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER / CONCLUSION -->
+        <footer class="text-center mt-12 pt-8 border-t border-gray-700">
+            <h3 class="text-3xl font-bold text-gray-300 mb-4">The Challenge Ahead</h3>
+            <p class="text-lg max-w-4xl mx-auto text-gray-400 italic">
+                "The challenge for our generation is to maintain our human soul and independent thought within this hyper-efficient, machine-driven world."
+            </p>
+            <p class="mt-6 text-sm text-gray-500">
+                — Group Presentation Concluded —
+            </p>
+        </footer>
+    </div>
+
+    <!-- SCRIPT FOR INTERACTIVITY AND ICONS -->
+    <script>
+        // Function to toggle the visibility of the content
+        function toggleSection(contentId, iconId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(iconId);
+
+            if (content.classList.contains('hidden')) {
+                // Show content
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                // Hide content
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Initialize Lucide Icons on load
+        window.onload = function() {
+            lucide.createIcons();
+            // Automatically open the first section on load for initial visibility
+            toggleSection('content-infrastructure', 'icon-infrastructure');
+        };
+    </script>
+</body>
+</html>
